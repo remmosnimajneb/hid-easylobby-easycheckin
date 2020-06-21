@@ -27,7 +27,7 @@ Meaning, if installed on another PC, you need to allow access to Port 3306 on th
 2. Your going to want to change Apache port to another port - as 80 or 8080 may be used by EasyLobby eAdvance - so follow this to change the port to something arbitrary (let's say 4000) https://stackoverflow.com/questions/8574332/how-to-change-port-number-for-apache-in-wamp
 3. Then comes the hard part, you need to instal SQL Drivers for PHP, you need drivers for "sqlsrv" for PHP (Using PDO). It's really annoying, so I'll try to give whatever points I can, but ultimately, it can be done, just have patience, alot of it.
 
-# Installation and Configure SQLSRV Drivers for PHP on WAMPSERVER
+### Installation and Configure SQLSRV Drivers for PHP on WAMPSERVER
 0. Start here to grab the drivers (if unsure, grab all of them) https://docs.microsoft.com/en-us/sql/connect/php/microsoft-php-driver-for-sql-server?view=sql-server-2017
 1. Then you need to drop the extracted DLL's into "C:\wamp64\bin\php\PHP_VERSION\ext\"
 2. Finally (hopefully?) you need to configure them in PHP.ini, though, WAMP has TWO PHP.ini locations, so make sure to update both: "C:\wamp64\bin\php\PHP_VERSION\php.ini" AND "C:\wamp64\bin\php\PHP_VERSION\phpForApache.ini"
