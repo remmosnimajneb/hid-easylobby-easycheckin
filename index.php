@@ -17,11 +17,10 @@
 /* Get Config File */
 $Config = json_decode(file_get_contents("Config.json"), true);
 
-
 /* Get SQL Login Info */
-DEFINE('DB_NAME', $Config['SQL_DB_USERNAME']);
-DEFINE('DB_USER', $Config['SQL_DB_PASSWORD']);
-DEFINE('DB_PASS', $Config['SQL_DB_DATABASE']);
+DEFINE('DB_NAME', $Config['SQL_DB_DATABASE']);
+DEFINE('DB_USER', $Config['SQL_DB_USERNAME']);
+DEFINE('DB_PASS', $Config['SQL_DB_PASSWORD']);
 
 $DBConnection = new PDO( "sqlsrv:server=(local) ; Database = " . DB_NAME, DB_USER, DB_PASS);  
 $DBConnection->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );  
