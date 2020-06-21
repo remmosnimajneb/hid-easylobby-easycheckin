@@ -23,6 +23,7 @@ Note: This assumes you have EasyLobby SVM installed properly and configured.
 So the way this works is that it directly connects and alters the SQL Database for EasyLobby - so you need access to the local MSSQL Database on the machine it's installed on.
 Meaning, if installed on another PC, you need to allow access to Port 3306 on the PC (LAN or WAN Port Forwarding works), or as we do, install this on a Local WAMP Stack, we're taking the second route.
 
+### Setup WAMP Server
 1. Install WAMP Server - https://www.wampserver.com/en/
 2. Your going to want to change Apache port to another port - as 80 or 8080 may be used by EasyLobby eAdvance - so follow this to change the port to something arbitrary (let's say 4000) https://stackoverflow.com/questions/8574332/how-to-change-port-number-for-apache-in-wamp
 3. Then comes the hard part, you need to instal SQL Drivers for PHP, you need drivers for "sqlsrv" for PHP (Using PDO). It's really annoying, so I'll try to give whatever points I can, but ultimately, it can be done, just have patience, alot of it.
@@ -35,6 +36,7 @@ Meaning, if installed on another PC, you need to allow access to Port 3306 on th
 4. Finally, hopefully if it went well, just start WAMP, you may get a bunch of warnings, that MAY be ok, just keep going.
 5. If this doesn't work, look around online you'll find more help.
 
+### Configure EasyCheckin
 4. Now assuming that worked.....Let's configure the Config.json file.
 Insert your EasyLobby SVM SQL Username, Password and Database name.
 Then you need to grab your Station ID from the SQL Server (Grab the [ID] column from dbo.Site on SSMS)
